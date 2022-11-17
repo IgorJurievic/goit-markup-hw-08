@@ -1,0 +1,31 @@
+.about {
+    padding-bottom: 0;
+}
+
+.pic-list {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+}
+
+.pic-list__item {
+    width: 270px;
+
+    &-container {
+        background-color: var(--teem-bg-color);
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}
+
+.pic-list__title {
+    margin-bottom: 10px;
+}
+
+.pic-list__text {
+    color: var(--text-color);
+    line-height: 1.71;
+}

@@ -1,0 +1,80 @@
+.navigation-list {
+    @extend %list;
+    display: flex;
+    gap: 8px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.project-list {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    flex-basis: calc((100% - 60px) / 3);
+}
+
+.project-link-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-link {
+    display: block;
+    transition: box-shadow var(--trn);
+
+    &:hover {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.project-wrap {
+    padding: 20px 24px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #eeeeee;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eeeeee;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #eeeeee;
+}
+
+.title-project {
+    color: var(--primary-text-color);
+
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+    flex-wrap: nowrap;
+}
+
+.text-project {
+    color: var(--text-color);
+
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+.project-thumb-text {
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--white-color);
+    background: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    transition: transform var(--trn);
+
+    .project-link:hover & {
+        transform: translateY(0);
+    }
+}

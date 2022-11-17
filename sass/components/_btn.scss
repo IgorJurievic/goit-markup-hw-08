@@ -1,0 +1,12 @@
+.button {
+    @include font ($size: 16px, $height: 1.88,
+        $weight: 700,
+        $spacing: 0.06em);
+    font-family: inherit;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}

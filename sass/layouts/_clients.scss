@@ -1,0 +1,32 @@
+.clients-title {
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+}
+
+.clients-item {
+    width: calc((100% - 150px) / 6);
+    height: 92px;
+}
+
+.clients-link {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #afb1b8;
+    transition: fill var(--trn), border-color var(--trn);
+
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+        fill: var(--accent-color);
+    }
+}
