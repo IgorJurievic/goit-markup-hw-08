@@ -457,6 +457,7 @@ img {
 @media screen and (min-width: 768px) {
   .header__menu {
     display: flex;
+    margin-left: 87px;
   }
 }
 
@@ -758,8 +759,8 @@ img {
   display: flex;
   gap: 8px;
   text-align: center;
-  justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .project-list {
@@ -769,7 +770,17 @@ img {
 }
 
 .project-item {
-  flex-basis: calc((100% - 60px) / 3);
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .project-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .project-link-thumb {

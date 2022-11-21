@@ -3,8 +3,11 @@
     display: flex;
     gap: 8px;
     text-align: center;
-    justify-content: center;
-    margin-bottom: 50px;
+    // justify-content: center;
+    // margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
 }
 
 .project-list {
@@ -15,7 +18,16 @@
 }
 
 .project-item {
-    flex-basis: calc((100% - 60px) / 3);
+    width: 100%;
+
+    @media screen and(min-width: $tablet) {
+        @include calc (2, 30px);
+    }
+
+    @media screen and(min-width: $desktop) {
+        @include calc (3, 30px);
+
+    }
 }
 
 .project-link-thumb {
