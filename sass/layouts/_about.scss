@@ -5,24 +5,42 @@
 .pic-list {
     @extend %list;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
+
+
 .pic-list__item {
-    width: 270px;
+    width: 100%;
 
     &-container {
         background-color: var(--teem-bg-color);
-        height: 120px;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 30px;
     }
+
+    @media screen and(min-width: $tablet) {
+        @include calc (2, 30px);
+    }
+
+    @media screen and(min-width: $desktop) {
+        @include calc (4, 30px);
+
+    }
 }
+
 
 .pic-list__title {
     margin-bottom: 10px;
+
+
+    @media screen and(max-width: 479px) {
+        text-align: center;
+    }
 }
 
 .pic-list__text {

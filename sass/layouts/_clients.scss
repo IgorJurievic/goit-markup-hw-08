@@ -5,12 +5,23 @@
 .clients-list {
     @extend %list;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .clients-item {
-    width: calc((100% - 150px) / 6);
+    @include calc (2, 30px);
     height: 92px;
+
+
+    @media screen and(min-width: $tablet) {
+        @include calc (3, 30px);
+    }
+
+    @media screen and(min-width: $desktop) {
+        @include calc (6, 30px);
+
+    }
 }
 
 .clients-link {

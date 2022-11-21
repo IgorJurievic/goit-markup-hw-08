@@ -4,3 +4,7 @@
     font-weight: $weight;
     letter-spacing: $spacing;
 }
+
+@mixin calc($count, $gap) {
+    width: calc((100% - $gap * ($count - 1)) / $count);
+}
