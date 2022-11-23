@@ -76,6 +76,7 @@
         display: flex;
         gap: 30px;
         flex-direction: row;
+        align-items: baseline;
     }
 }
 
@@ -90,7 +91,7 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    display: block;
+    display: flex;
     align-items: center;
     transition: color var(--trn);
 
@@ -103,126 +104,4 @@
 .contacts__icon {
     fill: currentColor;
     margin-right: 10px;
-}
-
-.menu-open {
-    background-color: transparent;
-    fill: var(--main-logo-color);
-    margin-left: auto;
-
-    @media screen and(min-width: $tablet) {
-        display: none;
-
-    }
-
-}
-
-.mob-menu {
-    width: 100vw;
-    height: 100vh;
-    padding: 48px 40px;
-    background-color: var(--white-color);
-    top: 0;
-    z-index: 1;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
-
-    @media screen and(max-width: $mobile) {
-        padding: 48px 10px;
-
-    }
-
-}
-
-.menu-close {
-    background-color: transparent;
-    fill: var(--main-logo-color);
-    position: absolute;
-    top: 10px;
-    right: 15px;
-
-    &:hover,
-    &:focus {
-        fill: var(--accent-color);
-    }
-}
-
-
-.mob-menu-list {
-    @extend %list;
-    display: block;
-    margin-bottom: 15px;
-
-}
-
-.mob-menu-list .link {
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
-    margin-bottom: 32px;
-    display: block;
-
-    transition: color var(--trn);
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.current {
-        color: var(--accent-color);
-    }
-}
-
-.mob-menu-contacts {
-    @extend %list;
-    // display: none;
-    gap: 50px;
-}
-
-.mob-menu-tel {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
-    color: var(--accent-color);
-
-}
-
-.mob-menu-email {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-
-    color: var(--text-color);
-    margin-top: 32px;
-}
-
-.mob-menu-soc {
-    @extend %list;
-    display: flex;
-    gap: 10px;
-    margin-top: 64px;
-}
-
-.mob-menu-soc-item {
-    &:not(:last-child) {
-        padding-right: 10px;
-        border-right-width: 1px;
-        border-right-style: solid;
-        border-right-color: rgba(33, 33, 33, 0.2);
-    }
-
-}
-
-.mob-menu-soc-link {
-    color: var(--accent-color);
-
-
-
-
 }
