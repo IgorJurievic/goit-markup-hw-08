@@ -3,11 +3,17 @@
     display: flex;
     gap: 8px;
     text-align: center;
-    // justify-content: center;
-    // margin-bottom: 50px;
     margin-bottom: 40px;
-
     flex-wrap: wrap;
+
+    @media screen and(min-width: $tablet) {
+        justify-content: center;
+    }
+
+    @media screen and(min-width: $desktop) {
+        margin-bottom: 50px;
+
+    }
 }
 
 .project-list {
