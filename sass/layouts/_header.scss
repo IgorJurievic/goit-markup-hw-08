@@ -129,6 +129,12 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
+
+    @media screen and(max-width: $mobile) {
+        padding: 48px 10px;
+
+    }
+
 }
 
 .menu-close {
@@ -199,12 +205,24 @@
 .mob-menu-soc {
     @extend %list;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     margin-top: 64px;
+}
 
+.mob-menu-soc-item {
+    &:not(:last-child) {
+        padding-right: 10px;
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-right-color: rgba(33, 33, 33, 0.2);
+    }
 
 }
 
 .mob-menu-soc-link {
     color: var(--accent-color);
+
+
+
+
 }
